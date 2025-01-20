@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Your Movie Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MovieFlix</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button id="searchButton" class="search-btn">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="filters">
+            <button class="filter-btn active" data-genre="popular">Popular</button>
+            <button class="filter-btn" data-genre="action">Action</button>
+            <button class="filter-btn" data-genre="comedy">Comedy</button>
+            <button class="filter-btn" data-genre="drama">Drama</button>
+            <button class="filter-btn" data-genre="sci-fi">Sci-Fi</button>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+            <!-- Movies will be dynamically inserted here -->
+        </div>
+        
+        <div id="loading" class="loading">Loading...</div>
+    </main>
+
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="modalContent"></div>
+            <div id="videoPlayerContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
